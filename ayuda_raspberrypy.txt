@@ -1,0 +1,83 @@
+Espacio disponible en disco
+===========================
+df -h
+
+Montaje de uniodad SMB
+======================
+mount -t cifs //server/share /mnt/abc -o user=user,pass=password,dom=domain
+umount /mnt/abc
+
+Montaje unidad SSH SFTP
+=======================
+sshfs <username>@<ipaddress>:/remotepath ~/remoteserv
+
+
+Memoria disponible
+========================
+free -h
+
+Distribucion del espacio usado por los archivos
+===============================================
+ncdu /
+
+Listar inalambricas disponibles
+===============================
+sudo iwlist wlan0 scan | less
+
+Configurar WIFI
+=======================
+sudo nano /etc/wpa_supplicant/wpa_supplicant.conf
+sudo wpa_cli reconfigure
+ifconfig wlan0
+
+Configuracion BlueTooth
+=======================
+sudo bluetoothctl
+agent on
+default-agent
+scan on
+pair XX:XX:XX:XX:XX:XX
+connect XX:XX:XX:XX:XX:XX
+devices
+remove XX:XX:XX:XX:XX:XX
+agent off
+power on
+power off
+
+Configuracion RaspberryPi
+=========================
+sudo raspi-config
+
+Trafico de red
+==============
+sudo bmon
+sudo speedometer -r eth0 -t eth0
+sudo iptraf
+
+Procesos activos
+================
+htop
+top
+
+Administradores de archivos visuales
+===================================
+emacs
+mc
+
+Torrent
+==========
+rtorrent
+
+man rtorrent
+^s     Start
+^d     Pause (If paused, remove)
+^o     Change Download directory
+^k     Remove
+a/s/d  Increase the upload throttle by 1/5/50 KB.
+z/x/c  Decrease the upload throttle by 1/5/50 KB.
+A/S/D  Increase the download throttle by 1/5/50 KB.
+Z/X/C  Decrease the download throttle by 1/5/50 KB.
++/-    Change Priority
+^q     Quit
+ ¿
+
