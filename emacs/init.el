@@ -2,9 +2,9 @@
 
 (global-set-key (kbd "M-.") 'avy-goto-char)
 (global-set-key (kbd "C-'") 'avy-goto-char-2)
-(global-set-key (kbd "M-g f") 'avy-goto-line)
-(global-set-key (kbd "M-g w") 'avy-goto-word-1)
-(global-set-key (kbd "M-g e") 'avy-goto-word-0)
+(global-set-key (kbd "M-g M-l") 'avy-goto-line)
+(global-set-key (kbd "M-g M-f") 'avy-goto-word-1)
+(global-set-key (kbd "M-g M-h") 'avy-goto-word-0)
 
 (require 'package) ;; You might already have this line
 (add-to-list 'package-archives
@@ -16,12 +16,12 @@
 
 (require 'multiple-cursors)
 
-(global-set-key(kbd "M-S-c M-S-c") 'mc/edit-lines)
-(global-set-key(kbd "M-d") 'mc/mark-next-like-this)
-(global-set-key(kbd "M-f") 'mc/mark-previous-like-this)
-(global-set-key(kbd "C-c M-<") 'mc/mark-all-like-this)
+(global-set-key(kbd "M-s-c M-s-c") 'mc/edit-lines)
+(global-set-key(kbd "M-[ c") 'mc/mark-next-like-this)
+(global-set-key(kbd "M-] d") 'mc/mark-previous-like-this)
+(global-set-key(kbd "M-[ b") 'mc/mark-all-like-this)
 
-(global-unset-key (kbd "M-<down-mouse-1>")) (global-set-key (kbd "M-<mouse-1>") 'mc/add-cursor-on-click)
+(global-set-key (kbd "M-[ m") 'mc/add-cursor-on-click)
 
 (add-hook 'python-mode-hook 'jedi:setup)
 (setq jedi:complete-on-dot t)                 ; optional
