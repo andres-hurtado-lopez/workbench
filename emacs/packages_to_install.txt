@@ -1,3 +1,4 @@
 autocomplete
 company-mode
 semantics
+helm https://emacs-helm.github.io/helm/
