@@ -20,14 +20,14 @@ resetclient
 ===========
 
 M-x restclient-mode --    Entrar el modo de restclient
-C-c C-c      --           Ejecutar la peticion usando pretty printy para el buffer de respuesta
-C-c C-c      --           lo mismo que C-c C-c pero sin hacer focus en le nuevo buffer con la respuesta
-C-c C-r      --           Ejecuta la peticion en raw sin hacer pretty print
-C-c C-p      --           Saltar al query anterior
-C-c C-n      --           saltar al proxumo query
-C-c C-.      --           marcar el query que esta en el cursor
-C-c C-u      --           copiar el query en el cursos como un comando de curl
-C-c n n      --           recortar solo a la region de la peticion actual incluyendo cabeceras
+C-c C-c             --           Ejecutar la peticion usando pretty printy para el buffer de respuesta
+C-c C-c             --           lo mismo que C-c C-c pero sin hacer focus en le nuevo buffer con la respuesta
+C-c C-r             --           Ejecuta la peticion en raw sin hacer pretty print
+C-c C-p             --           Saltar al query anterior
+C-c C-n             --           saltar al proxumo query
+C-c C-.             --           marcar el query que esta en el cursor
+C-c C-u             --           copiar el query en el cursos como un comando de curl
+C-c n n             --           recortar solo a la region de la peticion actual incluyendo cabeceras
 
 
 Version-Control
