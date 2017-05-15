@@ -1,15 +1,50 @@
+avy-mode
+=========
+M-."    avy-goto-char
+C-'"    avy-goto-char-2
+M-g M-l"  avy-goto-line
+M-g M-f"  avy-goto-word-1 
+M-g M-h"  avy-goto-word-0 -- Cualquier palabra en pantalla sin input previo
+
+
+multicursor
+===========
+M-s-c M-s-c     mc/edit-lines
+C-<left>        mc/mark-next-like-this
+C-<right>       mc/mark-previous-like-this
+C-<downleft>    mc/mark-all-like-this
+
+
+
+resetclient
+===========
+
+M-x restclient-mode --    Entrar el modo de restclient
+C-c C-c      --           Ejecutar la peticion usando pretty printy para el buffer de respuesta
+C-c C-c      --           lo mismo que C-c C-c pero sin hacer focus en le nuevo buffer con la respuesta
+C-c C-r      --           Ejecuta la peticion en raw sin hacer pretty print
+C-c C-p      --           Saltar al query anterior
+C-c C-n      --           saltar al proxumo query
+C-c C-.      --           marcar el query que esta en el cursor
+C-c C-u      --           copiar el query en el cursos como un comando de curl
+C-c n n      --           recortar solo a la region de la peticion actual incluyendo cabeceras
+
+
+Version-Control
+===============
+
 C-x v v     vc-next-action -- perform the next logical control operation on file
 C-x v i     vc-register -- add a new file to version control
 C-x v +     vc-update -- Get latest changes from version control
 C-x v ~     vc-version-other-window -- look at other revisions
 C-x v =     vc-diff -- diff with other revisions
 C-x v u     vc-revert-buffer -- undo checkout
-C-x v c     vc-cancel-version -- delete the latest revision (often it makes more sense to look at an old revision and check that in again!)
+C-x v c     vc-cancel-version -- delete the latest revision (often it makes more sense to look at an old revision and check that in again!
 C-x v d     vc-directory -- show all files which are not up to date
 C-x v g     vc-annotate -- show when each line in a tracked file was added and by whom
 C-x v s     vc-create-snapshot -- tag all the files with a symbolic name
 C-x v r     vc-retrieve-snapshot -- undo checkouts and return to a snapshot with a symbolic name
-C-x v l     vc-print-log -- show log (not in ChangeLog format)
+C-x v l     vc-print-log -- show log (not in ChangeLog format
 C-x v a     vc-update-change-log -- update ChangeLog
 C-x v m     vc-merge
 C-x v h     vc-insert-headers
