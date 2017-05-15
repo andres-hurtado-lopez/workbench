@@ -81,3 +81,7 @@ Z/X/C  Decrease the download throttle by 1/5/50 KB.
 ^q     Quit
  ¿
 
+
+Administracion de MYSQL
+========================
+mycli -uroot -ppassword nombre_base_de_datos

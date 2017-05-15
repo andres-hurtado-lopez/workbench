@@ -1,3 +1,10 @@
+sgml-mode
+=========
+C-c C-f  --  Avanzar un tag
+C-c C-b  -- retroceder un tag
+C-c C-o  -- Insertar un tag nuevo y genera tag de cierre
+C-c C-a  -- Generar un atributo para el tag
+
 avy-mode
 =========
 M-."    avy-goto-char
