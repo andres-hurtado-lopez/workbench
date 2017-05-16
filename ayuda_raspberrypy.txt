@@ -10,7 +10,8 @@ umount /mnt/abc
 Montaje unidad SSH SFTP
 =======================
 sshfs <username>@<ipaddress>:/remotepath ~/remoteserv
-
+sudo sshfs ubuntu@www.grupojad.com.co:/var/www /home/pi/grupojad -o IdentityFile=/home/pi/.ssh/mail_server.pem -o allow_other
+sudo sshfs ubuntu@cloud1.grupojad.com.co:/home/ubuntu /home/pi/simpleagri -o IdentityFile=/home/pi/.ssh/simpleagri.pem -o allow_other
 
 Memoria disponible
 ========================
