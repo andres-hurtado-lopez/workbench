@@ -16,12 +16,14 @@
 
 (require 'multiple-cursors)
 
-(global-set-key(kbd "M-s-c M-s-c") 'mc/edit-lines)
-(global-set-key(kbd "M-[ c") 'mc/mark-next-like-this)
-(global-set-key(kbd "M-] d") 'mc/mark-previous-like-this)
-(global-set-key(kbd "M-[ b") 'mc/mark-all-like-this)
-
-(global-set-key (kbd "M-[ m") 'mc/add-cursor-on-click)
+;;(global-set-key(kbd "M-s-c M-s-c") 'mc/edit-lines)
+(global-unset-key(kbd "C-d"))
+(global-unset-key(kbd "C-f"))
+(global-unset-key(kbd "C-v"))
+(global-set-key(kbd "C-d") 'mc/mark-next-like-this)
+(global-set-key(kbd "C-f") 'mc/mark-previous-like-this)
+(global-set-key(kbd "C-v") 'mc/mark-all-like-this)
+;;(global-set-key (kbd "M-[ m") 'mc/add-cursor-on-click)
 
 (add-hook 'python-mode-hook 'jedi:setup)
 (setq jedi:complete-on-dot t)                 ; optional
