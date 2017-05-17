@@ -2,6 +2,11 @@ Espacio disponible en disco
 ===========================
 df -h
 
+Montaje de una unidad USB
+=========================
+mkdir /mnt/usb
+sudo mount -o uid=pi,gid=pi /dev/sda1 /mnt/usb
+
 Montaje de uniodad SMB
 ======================
 mount -t cifs //server/share /mnt/abc -o user=user,pass=password,dom=domain
