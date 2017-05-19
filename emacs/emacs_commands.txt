@@ -1,3 +1,23 @@
+ses-mode (simple spreadsheet mode)
+==================================
+M-x ses-mode --- Iniciar modo ses
+C-y -- Pegar
+M-w -- Copiar
+C-o -- Insertar Fila
+M-o -- Insertar Columna
+C-k -- Eliminar fila
+M-k -- Eliminar Columna
+C-c C-r -- Copiar ref. de celda al minibuffer segun lo seleccionado region
+p -- Printer (da format usando formatos de C encerrados en commillas dobles)
+M-p -- Printer de una columna completa
+TAB Inserta hacia la derecha
+
+Nota: Los archivos son extension .ses e emacs los reconoce inmediatamente
+
+Tutoriales:
+http://cd.oralux.net/docs/tutorials/en/simpleEmacsSpreadsheat.txt
+http://doc.endlessparentheses.com/Fun/ses-mode.html
+
 Bookmarks
 ==========
 C-x r m -- Establcer bookmark
