@@ -12,6 +12,8 @@ Montaje de uniodad SMB
 mount -t cifs //server/share /mnt/abc -o user=user,pass=password,dom=domain
 umount /mnt/abc
 
+mount -t cifs //192.168.1.106/movies /home/pi/nas -o user=hurtan983,pass=nhy6bgt5vfr4,uid=pi,gid=pi
+
 Montaje unidad SSH SFTP
 =======================
 sshfs <username>@<ipaddress>:/remotepath ~/remoteserv
