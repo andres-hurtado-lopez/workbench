@@ -138,9 +138,9 @@ rtorrent
 
 man rtorrent
 ^s     Start
-^d     Pause (If paused, remove)
+^d     Stop and remove
 ^o     Change Download directory
-^k     Remove
+^k     Stop
 a/s/d  Increase the upload throttle by 1/5/50 KB.
 z/x/c  Decrease the upload throttle by 1/5/50 KB.
 A/S/D  Increase the download throttle by 1/5/50 KB.
