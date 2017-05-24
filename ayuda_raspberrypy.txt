@@ -2,6 +2,14 @@ Espacio disponible en disco
 ===========================
 df -h
 
+Copiar Archivos con progreso y sin privilegios ni usuarios
+===========================================================
+pv Origin_path > destination_path
+
+realizar una operacion sobre archivos con nombres similares
+===========================================================
+for f in The.Expanse.S02*; do echo "$f";done  
+
 Montaje de una unidad USB
 =========================
 mkdir /mnt/usb
