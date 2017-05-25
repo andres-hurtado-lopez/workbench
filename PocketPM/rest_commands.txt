@@ -1,0 +1,15 @@
+;;Solicitud de cookie para logearse al sistema
+POST http://devirisa.grupojad.com.co/index.php
+user: ahurtado
+password: 12345678
+type: W
+language: eng
+
+;;Solicitud de equipos
+POST http://devirisa.grupojad.com.co/start.php
+class: SAPProxy
+method: getEquipmentForFilter
+
+{
+"filter":"Motor"
+}
