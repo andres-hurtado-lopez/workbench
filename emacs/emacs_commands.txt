@@ -44,7 +44,8 @@ multicursor
 C-d        mc/mark-next-like-this
 C-f       mc/mark-previous-like-this
 C-v    mc/mark-all-like-this
-
+C-M-b  backward-sextp
+C-M-f fordward-sextp
 
 
 resetclient
