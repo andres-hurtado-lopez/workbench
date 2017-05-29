@@ -98,6 +98,62 @@ sudo nano /etc/wpa_supplicant/wpa_supplicant.conf
 sudo wpa_cli reconfigure
 ifconfig wlan0
 
+To connect manually, you need to first start up wpa_cli. This assumes that wpa_supplicant is already running,
+which it should be in most cases. If it’s not, you will see an error when you start wpa_cli.
+
+Otherwise, once you’re in wpa_cli, it will show a prompt similar to this
+
+Selected interface 'wlan0'
+
+Interactive mode
+
+>
+
+Using the scan and scan_results command, you can scan for the networks and see some basic information
+
+> scan
+OK
+<2>CTRL-EVENT-SCAN-RESULTS
+> scan_results
+bssid / frequency / signal level / flags / ssid
+00:55:ab:25:ac:5a 2462	   -71	 [WPA2-PSK-CCMP][ESS]	WLAN-Network
+00:11:99:51:ba:f0 2437	   -64	 [WPA2-PSK-CCMP][ESS]	WLAN-Network2
+>
+
+In the above scan results, you can see the 2 networks that the computer can pick up, the frequencies / channel that
+they are broadcasting on, the signal strength, the security type, and network name. Both of these networks are
+using WPA2 with a Pre-Shared Key.
+
+To connect to one of them, we need to first create a network.
+
+> add_network
+
+This will output a number, which is the network ID.
+
+> add_network
+0
+
+This will create an empty network ready for us to configure it.
+Next up, we need to set the SSID and PSK for the network.
+
+set_network 0 ssid "WLAN-Network"
+set_network 0 psk "SupahSecretPassphrase"
+
+Once these parameters are entered, wpa_cli should show the client trying to connect straight away.
+When it tries to connect, it should show something like this
+
+> <2>Trying to authenticate with 00:55:ab:25:ac:5a (SSID='WLAN-Network' freq=2437 MHz)
+> <2>Trying to associate with 00:55:ab:25:ac:5a (SSID='WLAN-Network' freq=2437 MHz)
+> <2>Associated with 00:55:ab:25:ac:5a
+> <2>WPA: Key negotiation completed with 00:55:ab:25:ac:5a [PTK=CCMP GTK=CCMP]
+> <2>CTRL-EVENT-CONNECTED - Connection to 00:55:ab:25:ac:5a completed (reauth) [id=0 id_str=]
+
+Once the wireless has connected, it should automatically get an IP address.
+If it doesn’t you can run the dhclient command to force it to get an IP address via DHCP,
+or edit /etc/network/interfaces to set a static IP address for the wireless network interface.
+
+
+
 Configuracion BlueTooth
 =======================
 sudo bluetoothctl
