@@ -94,7 +94,7 @@ sudo iwlist wlan0 scan | less
 
 Configurar WIFI
 =======================
-sudo nano /etc/wpa_supplicant/wpa_supplicant.conf
+sudo emacs /etc/wpa_supplicant/wpa_supplicant.conf
 sudo wpa_cli reconfigure
 ifconfig wlan0
 
