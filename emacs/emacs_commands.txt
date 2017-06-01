@@ -1,3 +1,9 @@
+Character Encoding
+===================
+C-x C-m f -- set character encoding for saving file
+C-x RET c C-x C-f -- Force emacs to read file on specific character encoding
+M-x recode-region -- Recode a region because it was in another encoding to the actual encoding
+
 ses-mode (simple spreadsheet mode)
 ==================================
 M-x ses-mode --- Iniciar modo ses
