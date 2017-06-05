@@ -40,3 +40,45 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
+(defun scroll-up-10-lines ()
+  "Scroll up 10 lines"
+  (interactive)
+  (scroll-up 10))
+
+(defun scroll-down-10-lines ()
+  "Scroll down 10 lines"
+  (interactive)
+  (scroll-down 10))
+
+(global-set-key (kbd "<mouse-4>") 'scroll-down-10-lines)
+(global-set-key (kbd "<mouse-5>") 'scroll-up-10-lines)
+
+
+(defun xah-forward-block (&optional n)
+    "Move cursor beginning of next text block.
+A text block is separated by blank lines.
+This command similar to `forward-paragraph', but this command's behavior is the same regardless of syntax table.
+URL `http://ergoemacs.org/emacs/emacs_move_by_paragraph.html'
+Version 2016-06-15"
+    (interactive "p")
+    (let ((n (if (null n) 1 n)))
+          (re-search-forward "\n[\t\n ]*\n+" nil "NOERROR" n)))
+
+(defun xah-backward-block (&optional n)
+    "Move cursor to previous text block.
+See: `xah-forward-block'
+URL `http://ergoemacs.org/emacs/emacs_move_by_paragraph.html'
+Version 2016-06-15"
+    (interactive "p")
+    (let ((n (if (null n) 1 n))
+	  (-i 1))
+      (while (<= -i n)
+	(if (search-backward-regexp "\n[\t\n ]*\n+" nil "NOERROR")
+	    (progn (skip-chars-backward "\n\t "))
+	  (progn (goto-char (point-min))
+		 (setq -i n)))
+	      (setq -i (1+ -i)))))
+
+(global-set-key (kbd "<mouse-8>") 'xah-backward-block)
+(global-set-key (kbd "<mouse-9>") 'xah-forward-block)
