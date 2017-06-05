@@ -1,0 +1,9 @@
+Host grupojad
+    HostName www.grupojad.com.co
+        User ubuntu
+	IdentityFile ~/.ssh/mail_server.pem
+
+Host simpleagri
+    HostName cloud1.simpleagri.com
+        User ubuntu
+	IdentityFile ~/.ssh/simpleagri.pem
