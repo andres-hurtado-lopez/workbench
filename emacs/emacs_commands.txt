@@ -47,12 +47,18 @@ M-g M-h"  avy-goto-word-0 -- Cualquier palabra en pantalla sin input previo
 
 multicursor
 ===========
-C-d        mc/mark-next-like-this
-C-f       mc/mark-previous-like-this
-C-v    mc/mark-all-like-this
-C-M-b  backward-sextp
-C-M-f fordward-sextp
-
+M-v -- Saltar entre cursores
+C-d -- mc/mark-next-like-this
+C-f -- mc/mark-previous-like-this
+C-v -- mc/mark-all-like-this
+C-M-b -- backward-sextp
+C-M-f -- fordward-sextp
+mc/edit-lines -- Pone todas la lineas seleccionas un cursor
+mc/mark-sgml-tag-pair -- Mark the current opening and closing tag.
+mc/insert-numbers -- Insert increasing numbers for each cursor, top to bottom.
+mc/insert-letters -- Insert increasing letters for each cursor, top to bottom.
+mc/sort-regions -- Sort the marked regions alphabetically.
+mc/reverse-regions -- Reverse the order of the marked regions.
 
 resetclient
 ===========
