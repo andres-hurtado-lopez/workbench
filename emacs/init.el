@@ -82,3 +82,14 @@ Version 2016-06-15"
 
 (global-set-key (kbd "<mouse-8>") 'xah-backward-block)
 (global-set-key (kbd "<mouse-9>") 'xah-forward-block)
+
+(defun duplicate-line()
+  (interactive)
+  (move-beginning-of-line 1)
+  (kill-line)
+  (yank)
+  (open-line 1)
+  (next-line 1)
+  (yank)
+  )
+(global-set-key (kbd "C-d") 'duplicate-line)
