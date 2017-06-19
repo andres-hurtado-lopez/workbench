@@ -1,4 +1,5 @@
 (setq backup-inhibited t)
+(setq column-number-mode t)
 
 (global-set-key (kbd "M-.") 'avy-goto-char)
 (global-set-key (kbd "C-'") 'avy-goto-char-2)
