@@ -3,7 +3,12 @@ Host grupojad
         User ubuntu
 	IdentityFile ~/.ssh/mail_server.pem
 
-Host simpleagri
+Host simpleagri1
     HostName cloud1.simpleagri.com
         User ubuntu
 	IdentityFile ~/.ssh/simpleagri.pem
+
+Host simpleagri2
+    HostName cloud2.simpleagri.com
+        User ubuntu
+	IdentityFile ~/.ssh/simpleagri_asia.pem
